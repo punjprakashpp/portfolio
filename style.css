@@ -577,6 +577,18 @@ footer .text span a:hover {
   }
 }
 
+@media (max-width: 1000px) {
+  .home {
+    background: url("images/tbackground.jpg") no-repeat;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    background: url("images/mbackground.jpg") no-repeat;
+  }
+}
+
 @media (max-width: 500px) {
   .home .text-two {
     font-size: 55px;
