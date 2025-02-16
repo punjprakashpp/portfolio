@@ -262,7 +262,17 @@ nav.sticky .menu-btn {
   object-fit: cover;
 }
 
+@media (max-width: 1000px) {
+  .home {
+    background: url("../img/tbackground.jpg") no-repeat center center / cover;
+  }
+}
+
 @media (max-width: 600px) {
+  .home {
+    background: url("../img/mbackground.jpg") no-repeat center center / cover;
+  }
+
   .home .text {
     width: 100%;
   }
