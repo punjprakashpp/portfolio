@@ -129,7 +129,7 @@ nav.sticky .menu-btn {
 .home {
   height: 100vh;
   width: 100%;
-  background: url("img/background.jpg") no-repeat;
+  background: url("../img/background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -578,13 +578,13 @@ footer .text span a:hover {
 
 @media (max-width: 1000px) {
   .home {
-    background: url("img/tbackground.jpg") no-repeat;
+    background: url("../img/tbackground.jpg") no-repeat;
   }
 }
 
 @media (max-width: 600px) {
   .home {
-    background: url("img/mbackground.jpg") no-repeat;
+    background: url("../img/mbackground.jpg") no-repeat;
   }
 }
 
