@@ -28,7 +28,8 @@ menuBtn.onclick = function () {
   scrollBtn.style.pointerEvents = "none";
 };
 
-const hideNavMenu = () => {
+// Close side navigation
+cancelBtn.onclick = function () {
   navBar.classList.remove("active");
   menuBtn.style.opacity = "1";
   menuBtn.style.pointerEvents = "auto";
@@ -36,11 +37,14 @@ const hideNavMenu = () => {
   scrollBtn.style.pointerEvents = "auto";
 };
 
-// Close side navigation
-cancelBtn.onclick = hideNavMenu;
-
 // Close side navigation when a menu link is clicked
 let navLinks = document.querySelectorAll(".menu li a");
 navLinks.forEach((link) => {
-  link.addEventListener("click", hideNavMenu);
+  link.addEventListener("click", () => {
+    navBar.classList.remove("active");
+    menuBtn.style.opacity = "1";
+    menuBtn.style.pointerEvents = "auto";
+    body.style.overflow = "auto";
+    scrollBtn.style.pointerEvents = "auto";
+  });
 });
