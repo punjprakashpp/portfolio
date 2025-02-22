@@ -814,11 +814,6 @@ footer .text span a:hover {
     justify-content: center;
   }
 
-  /* Portfolio Section Styling */
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
   /* Experience Section Styling */
   .experience .experience-details {
     flex-direction: column;
@@ -950,11 +945,6 @@ footer .text span a:hover {
 
   .skills-details .boxes {
     justify-content: center;
-  }
-
-  /* Portfolio Section Styling */
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   /* Experience Section Styling */
