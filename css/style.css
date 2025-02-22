@@ -133,54 +133,6 @@ nav.sticky .menu-btn {
   color: #fff;
 }
 
-/* Responsive Media Query */
-@media (max-width: 750px) {
-  nav .navbar {
-    width: 90%;
-  }
-
-  nav .navbar .menu {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    background: #0E2431;
-    height: 100vh;
-    max-width: 400px;
-    width: 100%;
-    padding-top: 60px;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.5s ease;
-  }
-
-  .navbar.active .menu {
-    left: 0;
-  }
-
-  nav .navbar .menu a {
-    font-size: 23px;
-    display: block;
-    color: #fff;
-    margin: 15px 0;
-  }
-
-  nav.sticky .menu a:hover {
-    color: #4070f4;
-  }
-
-  nav .navbar .media-icons {
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  nav .menu-btn,
-  .navbar .menu .cancel-btn {
-    display: block;
-  }
-}
-
 /* Home Section Styling */
 .home {
   height: 100vh;
@@ -260,34 +212,6 @@ nav.sticky .menu-btn {
   max-height: 600px;
   border-radius: 12px;
   object-fit: cover;
-}
-
-@media (max-width: 1000px) {
-  .home {
-    background: url("../img/tbackground.jpg") no-repeat center center / cover;
-  }
-}
-
-@media (max-width: 600px) {
-  .home {
-    background: url("../img/mbackground.jpg") no-repeat center center / cover;
-  }
-
-  .home .text {
-    width: 100%;
-  }
-
-  .home .text-two {
-    font-size: 55px;
-  }
-
-  .home .text-three {
-    font-size: 30px;
-  }
-
-  .home .image {
-    display: none;
-  }
 }
 
 /* About Section Styling */
@@ -581,6 +505,82 @@ section .button button:hover {
   color: rgb(246, 78, 78);
 }
 
+/* Experience Section CSS */
+.experience {
+  background: #F0F8FF;
+  padding: 50px 0;
+}
+
+.experience .content {
+  padding: 40px 0;
+}
+
+.experience .experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience .experience-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience .experience-item h3 {
+  font-size: 22px;
+  color: #4070f4;
+  margin-bottom: 10px;
+}
+
+.experience .experience-item p {
+  color: #0E2431;
+  margin: 5px 0;
+}
+
+/* Education Section CSS */
+.experience {
+  padding: 50px 0;
+}
+
+.education .content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.education .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #0E2431;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.education .education-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education .education-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education .education-item h3 {
+  font-size: 22px;
+  color: #4070f4;
+  margin-bottom: 10px;
+}
+
+.education .education-item p {
+  color: #0E2431;
+  margin: 5px 0;
+}
+
 /* Contact Me CSS */
 .contact {
   background: #F0F8FF;
@@ -639,6 +639,7 @@ section .button button:hover {
   color: #4070f4;
   font-size: 24px;
   margin: 0 10px;
+  padding: 5px;
   transition: color 0.3s;
 }
 
@@ -706,76 +707,41 @@ footer .text span a:hover {
   display: none;
 }
 
-/* Responsive Media Query */
-@media (max-width: 1190px) {
-  section .content {
-    width: 85%;
-  }
-}
+/* Responsive Media Query for Tablet */
+@media (max-width: 768px) {
 
-@media (max-width: 1000px) {
-  .about .about-details {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .about .about-details .left {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .about-details .right {
+  /* Navbar Styling */
+  nav .navbar {
     width: 90%;
-    margin: 40px 0;
   }
 
-  .services .boxes .box {
-    margin: 20px 0;
-    width: calc(100% / 2 - 20px);
-  }
-}
-
-@media (max-width: 900px) {
-  .about .left img {
-    height: 350px;
-    width: 350px;
-  }
-}
-
-@media (max-width: 750px) {
-  .home .text-two {
-    font-size: 65px;
-  }
-
-  .home .text-three {
-    font-size: 35px;
-  }
-
-  .skills .skills-details {
-    align-items: center;
-    justify-content: center;
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
     flex-direction: column;
-  }
-
-  .skills-details .text {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-
-  .skills-details .boxes {
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    transition: all 0.5s ease;
   }
 
-  .services .boxes .box {
-    margin: 20px 0;
-    width: 100%;
+  .navbar.active .menu {
+    left: 0;
   }
 
-  .contact .text {
-    width: 100%;
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 15px 0;
+  }
+
+  nav.sticky .menu a:hover {
+    color: #4070f4;
   }
 
   nav .navbar .media-icons {
@@ -783,19 +749,230 @@ footer .text span a:hover {
     justify-content: center;
     margin-top: 20px;
   }
-}
 
-@media (max-width: 500px) {
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+
+  /* Home Section Styling */
+  .home {
+    background: url("../img/tbackground.jpg") no-repeat center center / cover;
+  }
+
+  .home .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home .text {
+    width: 100%;
+  }
+
+  .home .image {
+    width: 90%;
+    margin-top: 20px;
+  }
+
   .home .text-two {
     font-size: 55px;
   }
 
   .home .text-three {
-    font-size: 33px;
+    font-size: 35px;
   }
 
-  .skills-details .boxes .per {
-    font-size: 50px;
+  /* About Section Styling */
+  .about .about-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .about-details .left,
+  .about .about-details .right {
+    width: 100%;
+  }
+
+  .about .left img {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Skills Section Styling */
+  .skills .skills-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-details .text,
+  .skills-details .boxes {
+    width: 100%;
+  }
+
+  .skills-details .boxes {
+    justify-content: center;
+  }
+
+  /* Portfolio Section Styling */
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Experience Section Styling */
+  .experience .experience-details {
+    flex-direction: column;
+  }
+
+  /* Education Section Styling */
+  .education .education-details {
+    flex-direction: column;
+  }
+
+  /* Contact Section Styling */
+  .contact .content {
+    width: 90%;
+  }
+
+  .contact .media-icons a {
+    margin: 10px 0;
+  }
+}
+
+/* Responsive Media Query for Mobile and Small Devices */
+@media (max-width: 480px) {
+
+  /* Navbar Styling */
+  nav .navbar {
+    width: 90%;
+  }
+
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 300px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .navbar.active .menu {
+    left: 0;
+  }
+
+  nav .navbar .menu a {
+    font-size: 20px;
+    display: block;
+    color: #fff;
+    margin: 15px 0;
+  }
+
+  nav.sticky .menu a:hover {
     color: #4070f4;
+  }
+
+  nav .navbar .media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+
+  /* Home Section Styling */
+  .home {
+    background: url("../img/mbackground.jpg") no-repeat center center / cover;
+  }
+
+  .home .home-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .home .text {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .home .image {
+    width: 75%;
+    margin-top: 20px;
+  }
+
+  .home .text-two {
+    font-size: 45px;
+  }
+
+  .home .text-three {
+    font-size: 25px;
+  }
+
+  .home .text-four {
+    font-size: 18px;
+  }
+
+  /* About Section Styling */
+  .about .about-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .about-details .left,
+  .about .about-details .right {
+    width: 100%;
+  }
+
+  .about .left img {
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Skills Section Styling */
+  .skills .skills-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-details .text,
+  .skills-details .boxes {
+    width: 100%;
+  }
+
+  .skills-details .boxes {
+    justify-content: center;
+  }
+
+  /* Portfolio Section Styling */
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  /* Experience Section Styling */
+  .experience .experience-details {
+    flex-direction: column;
+  }
+
+  /* Education Section Styling */
+  .education .education-details {
+    flex-direction: column;
+  }
+
+  /* Contact Section Styling */
+  .contact .content {
+    width: 95%;
+  }
+
+  .contact .media-icons a {
+    margin: 10px 0;
   }
 }
