@@ -54,7 +54,6 @@ nav .navbar .logo a {
   font-weight: 500;
   font-size: 35px;
   color: #4070f4;
-  text-decoration: none;
 }
 
 nav.sticky .navbar .logo a {
@@ -77,7 +76,6 @@ nav .navbar .menu li {
   color: #0E2431;
   padding: 6px 0;
   transition: all 0.4s ease;
-  text-decoration: none;
 }
 
 .navbar .menu a:hover {
@@ -101,7 +99,6 @@ nav.sticky .menu a:hover {
   color: #4070f4;
   font-size: 18px;
   margin: 0 6px;
-  text-decoration: none;
 }
 
 nav.sticky .media-icons a {
@@ -223,6 +220,10 @@ section .content {
   width: 80%;
   margin: 40px auto;
   font-family: 'Poppins', sans-serif;
+}
+
+.about .content {
+  padding: 40px 0;
 }
 
 .about .about-details {
@@ -517,7 +518,7 @@ section .button button:hover {
 
 .experience .experience-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
 }
 
@@ -540,11 +541,12 @@ section .button button:hover {
 }
 
 /* Education Section CSS */
-.experience {
+.education {
   padding: 50px 0;
 }
 
 .education .content {
+  padding: 40px 0;
   width: 80%;
   margin: 0 auto;
 }
@@ -559,7 +561,7 @@ section .button button:hover {
 
 .education .education-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
 }
 
