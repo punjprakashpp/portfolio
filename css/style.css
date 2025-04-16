@@ -545,11 +545,6 @@ section .button button:hover {
   padding: 50px 0;
 }
 
-.education .content {
-  padding: 40px 0;
-  width: 80%;
-  margin: 0 auto;
-}
 
 .education .title {
   font-size: 30px;
