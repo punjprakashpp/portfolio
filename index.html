@@ -1,272 +1,407 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfolio - Punj Prakash</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/fontawesome.min.css" />
-  <link href="favicon.ico" rel="icon" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punj Prakash - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Darker gray text */
+        }
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* Darker text for titles */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 4px;
+            background-color: #4f46e5; /* Indigo color */
+            border-radius: 9999px; /* rounded-full */
+        }
+        /* Custom styles for project cards */
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            padding: 2rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
+<body class="antialiased">
 
-<body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
-  <!-- Navigation Menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Portfolio.</a></div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Works</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-      </ul>
-    </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
-
-  <!-- Home Section Start -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">I'm Punj Prakash</div>
-        <div class="text-three">A Full-Stack Web Developer</div>
-        <div class="text-four">with 5+ years of experience in building scalable, modern, and interactive websites.</div>
-        <div class="button">
-          <a href="#contact">
-            <button>Hire Me</button>
-          </a>
-        </div>
-      </div>
-      <div class="image">
-        <img src="img/profile.jpg" alt="Punj Prakash">
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section Start -->
-  <section class="about" id="about">
-    <div class="content">
-      <div class="title"><span>About Me</span></div>
-      <div class="about-details">
-        <div class="left">
-          <img src="img/about.jpg" alt="Punj Prakash" />
-        </div>
-        <div class="right">
-          <div class="topic">Designing Is My Passion</div>
-          <p>
-            Hey there! I’m Punj Prakash, a full-stack developer with a passion for crafting user-friendly web
-            applications that
-            make a real impact.
-            <br><br>
-            Over the years, I’ve refined my skills in .NET technologies like ASP.NET, working across both front-end and
-            back-end
-            to create seamless digital experiences. I love tackling challenges, learning new things, and staying ahead
-            of the
-            curve in this ever-evolving tech world.
-            <br><br>
-            One of my proudest moments? Designing and developing the official website for UDCA—a project that was not
-            just
-            rewarding but also well-received for its usability and functionality.
-            <br><br>
-            I’m always up for collaborating on exciting projects and bringing ideas to life. Let’s build something
-            amazing
-            together! 🚀
-          </p>
-          <div class="button">
-            <a href="docs/resume.pdf" target="_blank" download>
-              <button>Download Resume</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- About Section End -->
-
-  <!-- My Skills Section Start -->
-  <section class="skills" id="skills">
-    <div class="content">
-      <div class="title"><span>My Skills</span></div>
-      <div class="skills-details">
-        <div class="text">
-          <div class="topic">Skills Reflects Our Knowledge</div>
-          <p>Creating beautiful, seamless digital experiences with expertise in front-end & back-end development.</p>
-          <br>
-          <p>Blending creativity, logic, and tech to turn ideas into scalable solutions.</p><br>
-          <p>Passionate about building interactive experiences that feel as good as they look.</p><br>
-
-          <div class="experience">
-            <div class="num">5+</div>
-            <div class="exp">
-              Years Of <br />
-              Experience
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-700">Punj Prakash</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#education" class="text-gray-700 hover:text-indigo-600 transition duration-300">Education</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition duration-300">Contact</a>
             </div>
-          </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
-        <div class="boxes">
-          <div class="box">
-            <div class="topic">HTML</div>
-            <div class="per">90%</div>
-          </div>
-          <div class="box">
-            <div class="topic">CSS</div>
-            <div class="per">80%</div>
-          </div>
-          <div class="box">
-            <div class="topic">ASP.NET</div>
-            <div class="per">70%</div>
-          </div>
-          <div class="box">
-            <div class="topic">JavaScript</div>
-            <div class="per">60%</div>
-          </div>
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg py-2 hidden">
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+            <a href="#education" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Education</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- My Skills Section End -->
+    </nav>
 
-  <!-- My Portfolio Section Start -->
-  <section class="portfolio" id="portfolio">
-    <div class="content">
-      <div class="title"><span>My Works</span></div>
+    <section id="about" class="pt-28 pb-16 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
+            <div class="flex-shrink-0">
+                <img src="img/punj.jpg" alt="Punj Prakash" class="rounded-full border-4 border-white shadow-xl w-48 h-48 object-cover">
+            </div>
+            <div class="text-center md:text-left max-w-2xl">
+                <h1 class="text-5xl font-extrabold mb-4 leading-tight">Punj Prakash</h1>
+                <p class="text-2xl font-light mb-6">Computer Applications Postgraduate | Full-Stack Developer</p>
+                <p class="text-lg mb-8">
+                    Motivated and detail-oriented Computer Applications postgraduate with hands-on experience in full-stack development using ASP.NET, C#, and SQL Server. UGC NET qualified and aspiring to contribute in academia or the tech industry through software development, research, and teaching.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="https://github.com/punjprakashpp" target="_blank" class="bg-white text-indigo-700 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300 shadow-md">
+                        <i class="fab fa-github mr-2"></i> Visit GitHub
+                    </a>
+                    <a href="#contact" class="bg-indigo-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-indigo-800 transition duration-300 shadow-md">
+                        <i class="fas fa-envelope mr-2"></i> Contact Me
+                    </a>
+                    <a href="docs/resume.pdf" target="_blank" class="bg-white text-indigo-700 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300 shadow-md">
+                        <i class="fas fa-file-alt mr-2"></i> View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="portfolio-grid">
-        <!-- Portfolio Item 1 -->
-        <div class="portfolio-item">
-          <img src="img/udcatmbu.png" alt="UDCA TMBU Website">
-          <h3>UDCA TMBU Official Website</h3>
-          <div class="tags">
-            <span>ASP.NET</span>
-            <span>HTML&CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <a href="https://github.com/punjprakashpp/udca-tmbu-website" target="_blank">Know More</a>
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mx-auto mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Languages</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>C#.NET</li>
+                        <li>VB.NET</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Web Technologies</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>ASP.NET</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tools</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>Visual Studio</li>
+                        <li>SQL Server Management Studio</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Database</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">  
+                        <li>MS SQL Server</li>                      
+                        <li>My SQL</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Operating Systems</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Windows</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Platforms</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Portfolio Item 2 -->
-        <div class="portfolio-item">
-          <img src="img/library.png" alt="Library Management System">
-          <h3>Library Management System</h3>
-          <div class="tags">
-            <span>ASP.NET</span>
-            <span>HTML&CSS</span>
-            <span>Web App</span>
-          </div>
-          <a href="https://github.com/punjprakashpp/Library" target="_blank">Know More</a>
-        </div>
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mx-auto mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">UDCA Official Website</h3>
+                    <p class="text-gray-700 mb-4">
+                        Designed and developed a responsive website to streamline departmental communication, showcase achievements, and enhance user experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">ASP.NET</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">C#</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">MS SQL Server</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                    </div>
+                    <a href="https://udcatmbu.org" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        Visit Project <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                    <a href="https://github.com/punjprakashpp/udca-tmbu-website/" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
 
-        <!-- Portfolio Item 3 -->
-        <div class="portfolio-item">
-          <img src="img/bhagalpur.png" alt="BhagalpurTrails">
-          <h3>BhagalpurTrails Website</h3>
-          <div class="tags">
-            <span>HTML&CSS</span>
-            <span>JavaScript</span>
-            <span>Website</span>
-          </div>
-          <a href="https://github.com/punjprakashpp/BhagalpurTrails" target="_blank">Know More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- My Portfolio Section End -->
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">BhagalpurTrails</h3>
+                    <p class="text-gray-700 mb-4">
+                        A simple Linux Distribution Guide, a static website built using HTML & CSS for a college project, serving as a beginner-friendly guide.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                    </div>
+                    <a href="https://punjprakashpp.github.io/BhagalpurTrails/" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        Visit Project <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                    <a href="https://github.com/punjprakashpp/BhagalpurTrails/" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
 
-  <!-- Experience Section Start -->
-  <section class="experience" id="experience">
-    <div class="content">
-      <div class="title"><span>Experience</span></div>
-      <div class="experience-details">
-        <div class="experience-item">
-          <h3>Full-Stack Developer</h3>
-          <p><strong>Company:</strong> XYZ Pvt Ltd</p>
-          <p><strong>Duration:</strong> Jan 2020 - Present</p>
-          <p>Developed and maintained web applications using ASP.NET, JavaScript, and other technologies.</p>
-        </div>
-        <div class="experience-item">
-          <h3>Web Developer Intern</h3>
-          <p><strong>Company:</strong> ABC Solutions</p>
-          <p><strong>Duration:</strong> Jun 2019 - Dec 2019</p>
-          <p>Assisted in the development of web applications and gained hands-on experience in front-end and back-end
-            development.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Experience Section End -->
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">Library Management System</h3>
+                    <p class="text-gray-700 mb-4">
+                        Built an online platform for book cataloging and user management with access control and data integrity.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">ASP.NET</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">C#</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">MS SQL Server</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                    </div>                    
+                    <a href="https://github.com/punjprakashpp/Library" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
 
-  <!-- Education Section Start -->
-  <section class="education" id="education">
-    <div class="content">
-      <div class="title"><span>Education</span></div>
-      <div class="education-details">
-        <div class="education-item">
-          <h3>Master of Computer Applications (MCA)</h3>
-          <p><strong>Institution:</strong> T.M. Bhagalpur University (TMBU)</p>
-          <p><strong>Year:</strong> 2022 - 2024</p>
-        </div>
-        <div class="education-item">
-          <h3>Bachelor of Computer Applications (BCA)</h3>
-          <p><strong>Institution:</strong> T.N.B. College, Bhagalpur</p>
-          <p><strong>Year:</strong> 2018 - 2022</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Education Section End -->
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">Event Management System</h3>
+                    <p class="text-gray-700 mb-4">
+                        A project developed using C#. (Details from GitHub are minimal, more info would be beneficial here).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">ASP.NET</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">C#</span>
+                    </div>
+                    <a href="https://github.com/punjprakashpp/EventManagementSystem" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
 
-  <!-- Contact Me Section Start -->
-  <section class="contact" id="contact">
-    <div class="content">
-      <div class="title"><span>Contact Me</span></div>
-      <div class="text">
-        <div class="topic">Have Any Project?</div>
-        <p>If you have any project or just want to say hi, feel free to contact me. I'm always open to discussing new
-          projects, creative ideas, or opportunities to be part of your vision.</p>
-        <div class="contact-details">
-          <p><strong>Phone:</strong> +91 9060311534</p>
-          <p><strong>Email:</strong> <a href="mailto:punjprakashpp@gmail.com">punjprakashpp@gmail.com</a></p>
-          <p><strong>Address:</strong> Hasanganj Road, Mirjanhat, Bhagalpur, Bihar, 812005</p>
-        </div>
-        <div class="media-icons">
-          <a href="https://www.facebook.com/punjprakashop" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/punjprakashop" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/punjprakashpp" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/punjprakashpp" target="_blank"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/punjprakashpp" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <div class="button">
-          <a href="https://wa.me/919060311534" target="_blank">
-            <button>Let's Chat</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Contact Me Section End -->
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">NoteApp</h3>
+                    <p class="text-gray-700 mb-4">
+                        A Notepad clone developed in VB.NET using Windows Forms, demonstrating basic text editing functionalities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Visual Basic .NET</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Windows Forms</span>
+                    </div>
+                    <a href="https://github.com/punjprakashpp/NoteApp" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
 
-  <!-- Footer Section Start -->
-  <footer>
-    <div class="text">
-      <span>Created By <a href="#">Punj Prakash</a> | &#169; 2024 All Rights Reserved</span>
-    </div>
-  </footer>
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">Student Attendance System</h3>
+                    <p class="text-gray-700 mb-4">
+                        A project developed using C#. (Details from GitHub are minimal, more info would be beneficial here).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">ASP.NET</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">C#</span>
+                    </div>
+                    <a href="https://github.com/punjprakashpp/StudentAttendanceSystem" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">DistroGuide</h3>
+                    <p class="text-gray-700 mb-4">
+                        A simple Linux Distribution Guide, a static website built using HTML & CSS for a college project, serving as a beginner-friendly guide.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                    </div>                    
+                    <a href="https://punjprakashpp.github.io/DistroGuide/" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        Visit Project <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                    <a href="https://github.com/punjprakashpp/DistroGuide" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
 
-  <script src="js/script.js"></script>
+                <div class="project-card">
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-3">Fauna</h3>
+                    <p class="text-gray-700 mb-4">
+                        A simple Wildlife Website, a static website built using HTML & CSS for a college project, showcasing various aspects of wildlife.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                    </div>
+                    <a href="https://punjprakashpp.github.io/Fauna/" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        Visit Project <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                    <a href="https://github.com/punjprakashpp/Fauna" target="_blank" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md mb-2">
+                        View on GitHub <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mx-auto mb-12">Education & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Education</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-bold text-lg">Master of Computer Applications (MCA)</p>
+                            <p>T.M. Bhagalpur University, Bihar | 2022-2024</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-lg">Bachelor of Computer Applications (BCA)</p>
+                            <p>T.M. Bhagalpur University, Bihar | 2018-2021</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Certifications & Qualifications</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-bold text-lg">Certificate in Website Development</p>
+                            <p>UDCA, TMBU</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-lg">UGC NET Qualified</p>
+                            <p>Eligible for Ph.D. admission and Assistant Professor</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="additional" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mx-auto mb-12">Additional Information</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
+                <ul class="space-y-4 text-gray-700 text-lg">
+                    <li>
+                        <span class="font-semibold">Academic Interests:</span> AI/ML, Web Security, Database Optimization
+                    </li>
+                    <li>
+                        <span class="font-semibold">Soft Skills:</span> Strong interpersonal and mentoring skills
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title text-center mx-auto text-white mb-12">Get in Touch</h2>
+            <p class="text-lg mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-3xl text-indigo-400"></i>
+                    <a href="mailto:punjprakashpp@gmail.com" class="text-xl hover:underline">punjprakashpp@gmail.com</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-phone-alt text-3xl text-indigo-400"></i>
+                    <span class="text-xl">+91 9060311534</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt text-3xl text-indigo-400"></i>
+                    <span class="text-xl">Hasanganj Road, Mirjanhat, Bhagalpur, Bihar - 812005</span>
+                </div>
+            </div>
+            <div class="mt-10 flex justify-center space-x-6">
+                <a href="https://github.com/punjprakashpp" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                    <i class="fab fa-github text-4xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/punjprakashpp" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                    <i class="fab fa-linkedin text-4xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Punj Prakash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu after clicking a link
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>
